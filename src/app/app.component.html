@@ -1,0 +1,28 @@
+<!--
+Bootstrap and JQuery Declarations Starts Here
+-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!--
+Bootstrap and JQuery Declarations Ends Here
+-->
+<div *ngIf="usersDataService?.userId">
+  <div *ngFor="let aboutServiceData of usersDataService?.headerArr">
+    <title>{{aboutServiceData.aboutName}}</title>
+  </div>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header" *ngFor="let aboutServiceData of usersDataService?.headerArr">
+        <a class="navbar-brand">{{aboutServiceData.aboutName}}</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active"><a routerLink="/about">About</a></li>
+        <li routerLinkActive="active"><a routerLink="/technical">Technical Skills</a></li>
+        <li routerLinkActive="active"><a routerLink="/projects">Projects</a></li>
+        <li routerLinkActive="active"><a (click)="logOut()">Log Out</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<router-outlet></router-outlet>

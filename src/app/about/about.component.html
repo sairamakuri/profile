@@ -1,0 +1,26 @@
+<div *ngFor="let aboutServiceData of aboutArray">
+  <div class="col-xs-12">
+    <div class="col-xs-3">
+      <label>Name: </label>
+    </div>
+    <div class="col-xs-6">
+      <label><b>{{aboutServiceData.aboutName}}</b></label>
+    </div>
+  </div>
+  <div class="col-xs-12" *ngIf="aboutServiceData.aboutMobile">
+    <div class="col-xs-3">
+      <label>Mobile: </label>
+    </div>
+    <div class="col-xs-6">
+      <label><b>{{aboutServiceData.aboutMobile}}</b></label>
+    </div>
+  </div>
+  <div class="col-xs-12">
+    <div class="col-xs-3">
+      <label>E-Mail: </label>
+    </div>
+    <div class="col-xs-6">
+      <label><b>{{aboutServiceData.aboutEmail}}</b></label>
+    </div>
+  </div>
+</div>

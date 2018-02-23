@@ -1,0 +1,8 @@
+<div class="col-xs-12">
+  <div class="col-xs-3">
+    <label>Project List: </label>
+  </div>
+  <div class="col-xs-6" *ngFor="let ProjectListServiceData of ProjectListServiceData">
+    <li routerLinkActive="active"><a routerLink="/description/{{ProjectListServiceData.projectId}}">{{ProjectListServiceData.projectName}}</a></li>
+  </div>
+</div>
